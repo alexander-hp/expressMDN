@@ -54,8 +54,12 @@ app.use(function (req, res, next) {
   next(createError(404));
 });
 
-const mongoDB =
-  'mongodb://localhost:27017/local_library?retryWrites=true&w=majority';
+// ?Local DB
+// const mongoDB =
+//   'mongodb://localhost:27017/local_library?retryWrites=true&w=majority';
+
+// ? OnlineDB
+const mongoDB = 'mongodb+srv://Alexander:C1s2hDouZypk9VlY@cluster0.beem60o.mongodb.net/?retryWrites=true&w=majority'
 
 main().catch((err) => console.log(err));
 async function main() {
